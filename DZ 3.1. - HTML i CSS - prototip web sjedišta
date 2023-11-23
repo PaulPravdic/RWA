@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #555;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      background-color: #a29c9c;
+    }
+
+    nav {
+      width: 200px;
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    section {
+      flex: 1;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    footer {
+      background-color: #555;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+
+    nav a:hover {
+      color: rgb(88, 88, 243);
+    }
+    
+    nav a.active {
+      font-weight: bold;
+    }
+
+    .container {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Filmovi.ba</h1>
+  </header>
+
+  <main>
+    <nav>
+      <a href="#" class="pocetna">Početna</a>
+      <a href="#">Filmovi</a>
+      <a href="#">Serije</a>
+      <a href="#">Omiljeni</a>
+    </nav>
+
+    <section>
+      <div class="container">
+        <h2>Film 1</h2>
+        <p>Opis prvog filma</p>
+      </div>
+
+      <div class="container">
+        <h2>Film 2</h2>
+        <p>Opis drugog filma</p>
+      </div>
+
+      <div class="container">
+        <h2>Film 3</h2>
+        <p>Opis trećeg filma</p>
+      </div>
+
+      <div class="container">
+        <h2>Film 4</h2>
+        <p>Opis četvrtog filma</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2023 Paul Pravdić
+  </footer>
+
+</body>
+</html>
