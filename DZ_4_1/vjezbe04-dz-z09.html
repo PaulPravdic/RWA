@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+    for (let i=1; i<1000; i++) {
+        polje=[];
+        umnozak=0;
+    for (let j=1; j<i-1; j++) {
+        if (i%j===0) {
+            polje.push(j);
+        }
+    }
+        umnozak=polje[0]
+    for (let k=1; k<polje.length; k++) {
+        umnozak+=polje[k];
+        }
+    if (umnozak===i) {
+        console.log(i);
+        }
+    }
+ </script>
+</body>
+</html>

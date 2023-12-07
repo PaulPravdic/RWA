@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+    const Osoba1={firstName:"Marko", lastName:"Maric", age:40, eyeColor:"black" }
+        const Osoba2={firstName:"Lara", lastName:"Pravdic", age:21, eyeColor:"brown" }
+        const Osoba3={firstName:"Pavao", lastName:"Sovic", age:47, eyeColor:"blue" }
+        const Osoba4={firstName:"Dragan", lastName:"Rezo", age:18, eyeColor:"green" }
+        Osobe=[Osoba1, Osoba2, Osoba3, Osoba4]
+        for (let i=0; i<Osobe.length; i++) {
+            const Osoba=Osobe[i];
+            document.write("Osoba "+(i + 1)+": <br>");
+            for (const svojstvo in Osoba) {
+                document.write(svojstvo+": "+Osoba[svojstvo] +"<br>");
+            }
+            document.write("<br>");
+        }
+ </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+Zadatak: Napisati JS program koji u konzolu i html dokument ispisuje proste brojeve od 1 do 1000 (u browseru svaki put u novom retku);
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+    for(let i=1; i<=1000; i++) {
+        let flag = true;
+             for (let j=2; j<i-1; j++) {
+                if (i%j===0) {
+                    flag=false;
+                }
+            }
+            if (flag===true) {
+                console.log(i);
+                document.write(i);
+                document.write("<br>");
+    }
+}
+ </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Zadatak: Napisati JS program koji u konzolu i u html dokument ispisuje parne brojeve od 1 do 100 i njihove kvadrate
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Varijable</title>
+</head>
+<body>
+ <script type="text/javascript">
+    for(let i= 0; i<=100; i++) {
+        if(i%2===0) {
+            console.log(i);
+            console.log(i*i);
+            document.write(i);
+            document.write(i*i);
+        }
+    }
+ </script>
+</body>
+</html>
