@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablice</title>
+</head>
+<body>
+    <form onsubmit="return provjeraTablica();">
+        <label for="registracijskeTablice">Unesite registarsku oznaku vozila (npr. A27 - A - 777): </label>
+        <input type="text" id="registracijskeTablice" name="registracijskeTablice" required>
+        <button type="submit">Provjeri</button>
+    </form>
+    <script>
+        function provjeraTablica() {
+            const registracijskeTabliceUlaz = document.getElementById('registracijskeTablice').value;
+            const tabliceRegex = /^[AEJKMOT]\d{2}\s-\s[AEJKMOT]\s-\s\d{3}$/;
+            if (tabliceRegex.test(registracijskeTabliceUlaz)) {
+                alert('Ispravna registarska oznaka!');
+                return true;
+            } else {
+                alert('Neispravna registarska oznaka. Unesite u formatu: A27 - A - 777');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

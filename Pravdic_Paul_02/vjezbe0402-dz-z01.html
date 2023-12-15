@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ar i geo sredina</title>
+    <script>
+        function IzracunajSredinu() {
+            var ulazniString = prompt("Unesite skup brojeva odvojenih zarezom (npr. 1, 4, 16):");
+            var brojevi = ulazniString.split(',').map(Number);
+            var aritmetickasredina = brojevi.reduce((sum, broj) => sum + broj, 0) / brojevi.length;
+            var geosredina = Math.pow(brojevi.reduce((zbroj, broj) => zbroj * broj), 1 / brojevi.length);
+            document.getElementById('rezultat').innerHTML = "Aritmetička sredina: " + aritmetickasredina.toFixed(2) + "<br>Geometrijska sredina: " + geosredina.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="IzracunajSredinu()">Izračunaj sredine</button>
+    <div id="rezultat"></div>
+</body>
+</html>
