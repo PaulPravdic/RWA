@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dob</title>
+</head>
+<body>
+    <form onsubmit="izracunajDob(); return false;">
+        <label for="dan">Unesite dan(01-31):</label>
+        <input type="number" id="dan" name="dan" min="1" max="31" required>
+        <br>
+        <label for="mjesec">Unesite mjesec(01-12):</label>
+        <input type="number" id="mjesec" name="mjesec" min="1" max="12" required>
+        <br>
+        <label for="godina">Unesite godinu:</label>
+        <input type="number" id="godina" name="godina" min="1900" max="2023" required>
+        <br>
+        <button type="submit">Izračunaj</button>
+    </form>
+    <script>
+        function izracunajDob() {
+            const dan = parseInt(document.getElementById('dan').value);
+            const mjesec = parseInt(document.getElementById('mjesec').value);
+            const godina = parseInt(document.getElementById('godina').value);
+            const dobDatum = new Date(godina, mjesec - 1, dan);
+            const trenutniDatum = new Date();
+            const dob = izracunajRazlikuGodina(dobDatum, trenutniDatum);
+            alert('Imate: ' + dob + ' godina.');
+        }
+        function izracunajRazlikuGodina(datum1, datum2) {
+            const razlikaGodina = datum2.getFullYear() - datum1.getFullYear();
+            const razlikaMjeseci = datum2.getMonth() - datum1.getMonth();
+            const razlikaDani = datum2.getDate() - datum1.getDate();
+            if (razlikaMjeseci < 0 || (razlikaMjeseci === 0 && razlikaDani < 0)) {
+                return razlikaGodina - 1;
+            } else {
+                return razlikaGodina;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator</title>
+</head>
+<body>
+<script type="text/javascript">
+    function izracunaj(operacija) {
+        let rezultat;
+        let broj1 = parseFloat(document.getElementById("broj1").value);
+        let broj2;
+        if (operacija !== "sin" && operacija !== "cos" && operacija !== "tan") {
+            broj2 = parseFloat(document.getElementById("broj2").value);
+        }
+        switch (operacija) {
+            case "zbroji":
+                rezultat=broj1+broj2;
+                break;
+            case "oduzmi":
+                rezultat=broj1-broj2;
+                break;
+            case "mnozi":
+                rezultat=broj1*broj2;
+                break;
+            case "dijeli":
+                rezultat=broj1/broj2;
+                break;
+            case "sin":
+                rezultat=Math.sin(broj1);
+                break;
+            case "cos":
+                rezultat=Math.cos(broj1);
+                break;
+            case "tan":
+                rezultat=Math.tan(broj1);
+                break;
+            case "ln":
+                rezultat=Math.log(broj1);
+                break;
+            case "log":
+                rezultat=Math.log10(broj1);
+                break;
+            case "kvadriraj":
+                rezultat=Math.pow(broj1, 2);
+                break;
+            case "kubiraj":
+                rezultat=Math.pow(broj1, 3);
+                break;
+            case "potenciraj":
+                let eksponent=parseFloat(prompt("Unesite eksponent:"));
+                rezultat=Math.pow(broj1, eksponent);
+                break;
+            default:
+                alert("Nepoznata operacija");
+                return;
+        }
+        alert("Rezultat operacije " + operacija + " je: " + rezultat);
+    }
+</script>
+<label for="broj1">Unesite prvi broj: </label>
+<input type="text" id="broj1">
+
+<label for="broj2">Unesite drugi broj: </label>
+<input type="text" id="broj2">
+<br>
+<button onclick="izracunaj('zbroji')">Zbroji</button>
+<button onclick="izracunaj('oduzmi')">Oduzmi</button>
+<button onclick="izracunaj('mnozi')">Množi</button>
+<button onclick="izracunaj('dijeli')">Dijeli</button>
+<button onclick="izracunaj('sin')">Sinus</button>
+<button onclick="izracunaj('cos')">Kosinus</button>
+<button onclick="izracunaj('tan')">Tangens</button>
+<button onclick="izracunaj('ln')">Prirodni logaritam</button>
+<button onclick="izracunaj('log')">Logaritam po bazi 10</button>
+<button onclick="izracunaj('kvadriraj')">Kvadriraj</button>
+<button onclick="izracunaj('kubiraj')">Kubiraj</button>
+<button onclick="izracunaj('potenciraj')">Potenciraj</button>
+</body>
+</html>
